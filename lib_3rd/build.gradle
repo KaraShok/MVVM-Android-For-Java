@@ -1,0 +1,79 @@
+if (isModule.toBoolean()) {
+    apply plugin: 'com.android.library'
+} else {
+    apply plugin: 'com.android.application'
+}
+
+android {
+    compileSdkVersion build_versions.compile_sdk
+
+    defaultConfig {
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    // Support libraries
+//    api deps.espresso.core
+//    api deps.atsl.runner
+//    api deps.support.app_compat
+//    testImplementation deps.junit
+//    api deps.support.v4
+//    api deps.support.design
+//    api deps.support.cardview
+//    api deps.support.recyclerview
+//    api deps.support.multidex
+//    api deps.constraint_layout
+    // Architecture components
+    api deps.lifecycle.runtime
+    api deps.lifecycle.extensions
+    annotationProcessor deps.lifecycle.compiler
+    api deps.room.runtime
+    annotationProcessor deps.room.compiler
+    //fresco
+    api deps.fresco.fresco
+    api deps.fresco.fresco_imagepipeline_okhttp3
+
+    //http
+    api deps.retrofit.runtime
+    api deps.retrofit.gson
+    api deps.retrofit.adapter_rxjava2
+    api deps.okhttp.okhttp3
+    api deps.okhttp.okhttp3_logging_interceptor
+    // RxJava
+    api deps.rx.rx_android
+    api deps.rx.rx_permissions2
+    //RxLifecycle
+    api deps.rxlifecycle.rxlifecycle
+    api deps.rxlifecycle.rxlifecycle_android
+    //router
+    api deps.arouter.runtime
+    //logutils
+    api deps.logutils
+    // gson
+    api deps.gson.gson
+
+}

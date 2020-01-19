@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <import type="com.karashok.library.common.databinding.recycler_view.LayoutManagers"/>
+        <variable
+            name="fgtTuozhanVM"
+            type="com.karashok.mvvm.module_gankio.data.view_modle.FgtTuozhanVM"/>
+    </data>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:refreshing="@{fgtTuozhanVM.refreshState.isRefreshing}"
+        app:onRefreshCommand="@{fgtTuozhanVM.refresh}">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="@{LayoutManagers.linear()}"
+            itemBinding="@{fgtTuozhanVM.singleItem}"
+            items="@{fgtTuozhanVM.items}"
+            app:onLoadMoreCommand="@{fgtTuozhanVM.onLoadMoreCommand}"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</layout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/aty_picture_selector_title_rl"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/black">
+
+        <TextView
+            android:id="@+id/aty_picture_selector_title_album_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="14dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/white"
+            android:drawableLeft="@drawable/back"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:drawablePadding="5dp"
+            android:text="相簿"
+            android:background="@drawable/btn_back_selector"/>
+
+        <TextView
+            android:id="@+id/aty_picture_selector_title_cancel_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="取消"
+            android:background="@drawable/btn_back_selector"/>
+
+        <TextView
+            android:id="@+id/aty_picture_selector_title_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/aty_picture_selector_title_album_tv"
+            android:layout_toLeftOf="@+id/aty_picture_selector_title_cancel_tv"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:ellipsize="middle"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:text="图片"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/aty_picture_selector_bottom_rl"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/gray_f9">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#FFD1D0D0"/>
+
+        <TextView
+            android:id="@+id/aty_picture_selector_bottom_review_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="14dp"
+            android:textColor="@color/selector_black_and_gray"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:gravity="center"
+            android:text="预览"/>
+
+        <TextView
+            android:id="@+id/aty_picture_selector_bottom_finish_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:textSize="14dp"
+            android:textColor="@color/selector_black_and_gray"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="完成"/>
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/aty_picture_selector_picture_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/aty_picture_selector_title_rl"
+        android:layout_above="@+id/aty_picture_selector_bottom_rl"
+        android:background="@color/gray_f5"
+        android:fadingEdge="none"
+        android:fadingEdgeLength="0dp"
+        android:overScrollMode="never"
+        android:scrollbars="none"/>
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.karashok.mvvm.module_gankio" >
+
+    <application>
+        <activity android:name=".ui.activity.MainActivity"></activity>
+        <activity android:name=".ui.activity.ZhihuActivity"></activity>
+    </application>
+</manifest>

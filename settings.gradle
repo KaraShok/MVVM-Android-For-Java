@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':lib_3rd', ':module_camera', ':module_db', ':module_gankio', ':module_image_load', ':module_photos_selector', ':module_preview_file', ':module_permission', ':module_preview_pictures', ':common', ':module_util'
 rootProject.name='MVVM-Android-For-Java'

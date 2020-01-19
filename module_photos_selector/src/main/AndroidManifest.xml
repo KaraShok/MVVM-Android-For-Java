@@ -1,0 +1,12 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.karashok.library.module_photos_selector" >
+
+    <application>
+        <activity android:name=".ui.activity.PictureSelectorActivity">
+        </activity>
+        <activity android:name=".ui.activity.FolderListActivity">
+        </activity>
+        <activity android:name=".ui.activity.PreviewPictureSelecterActivity">
+        </activity>
+    </application>
+</manifest>

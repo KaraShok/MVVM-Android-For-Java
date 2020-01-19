@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="itemFgtAndroidVM"
+            type="com.karashok.mvvm.module_gankio.data.view_modle.ItemFgtAndroidVM"/>
+    </data>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/item_list_zhihu_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        itemClickCommand="@{itemFgtAndroidVM.itemClick}">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/item_list_zhihu_iv"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="15dp"
+                imageURI="@{itemFgtAndroidVM.image}"
+                android:visibility="@{itemFgtAndroidVM.imageVisibility}"
+                android:adjustViewBounds="true"
+                app:actualImageScaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/item_list_zhihu_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/item_list_zhihu_iv"
+                android:text="@{itemFgtAndroidVM.title}"
+                android:textColor="#000000"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{itemFgtAndroidVM.time}"
+                android:textColor="@color/gray_88"
+                android:layout_below="@+id/item_list_zhihu_tv"
+                android:layout_marginTop="15dp"
+                android:layout_alignParentBottom="true"
+                android:textSize="10dp"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

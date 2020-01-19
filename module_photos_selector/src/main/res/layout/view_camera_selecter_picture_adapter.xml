@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="1dp"
+    android:background="#cfcdcd"
+    tools:ignore="VectorDrawableCompat"
+    android:id="@+id/view_camera_selector_adapter_rl">
+
+    <com.karashok.library.module_util.widget.SquareImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:padding="30dp"
+        android:scaleType="center"
+        app:srcCompat="@drawable/ic_camera_24dp"
+        android:tint="#686565"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:textColor="#686565"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="65dp"
+        android:text="拍照"/>
+</RelativeLayout>

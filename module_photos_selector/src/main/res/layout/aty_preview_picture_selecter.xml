@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.karashok.library.module_preview_pictures.ui.widget.PhotoViewPager
+        android:id="@+id/aty_preview_picture_selecter_content_pvp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#272828"/>
+
+    <RelativeLayout
+        android:id="@+id/aty_preview_picture_selecter_title_rl"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#000000">
+
+        <ImageView
+            android:id="@+id/aty_preview_picture_selecter_title_back_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/back"
+            android:background="@drawable/btn_back_selector"/>
+
+        <TextView
+            android:id="@+id/aty_preview_picture_selecter_title_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="18dp"/>
+
+        <ImageView
+            android:id="@+id/aty_preview_picture_selecter_title_select_iv"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:padding="5dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/aty_preview_picture_selecter_bottom_rl"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black">
+
+        <TextView
+            android:id="@+id/aty_preview_picture_selecter_buttom_finish_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:padding="5dp"
+            android:textColor="@color/selector_white_and_gray"
+            android:textSize="14dp"
+            android:gravity="center"/>
+    </RelativeLayout>
+</RelativeLayout>

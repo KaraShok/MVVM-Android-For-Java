@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="105dp">
+
+    <FrameLayout
+        android:id="@+id/view_item_folder_list_adapter_image_fl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:paddingRight="3dp"
+        android:paddingBottom="3dp"
+        android:background="@drawable/folder_bg">
+
+        <ImageView
+            android:id="@+id/view_item_folder_list_adapter_image_iv"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            android:background="@color/white"/>
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/view_item_folder_list_adapter_select_iv"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"/>
+
+    <TextView
+        android:id="@+id/view_item_folder_list_adapter_folder_name_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/view_item_folder_list_adapter_select_iv"
+        android:layout_toRightOf="@+id/view_item_folder_list_adapter_image_fl"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="30dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textSize="16dp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/view_item_folder_list_adapter_folder_size_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/view_item_folder_list_adapter_select_iv"
+        android:layout_toRightOf="@+id/view_item_folder_list_adapter_image_fl"
+        android:layout_below="@+id/view_item_folder_list_adapter_folder_name_tv"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="8dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textSize="14dp"
+        android:textColor="@color/gray_AA"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/gray_AA"/>
+</RelativeLayout>

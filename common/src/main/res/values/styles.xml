@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/appMain</item>
+        <item name="colorPrimaryDark">@color/appMain</item>
+        <item name="colorAccent">@color/appMain</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="SplashActivityTheme" parent="ThemeFullScreen">
+        <!--<item name="android:windowBackground">@drawable/bg_splash_aty</item>-->
+    </style>
+
+    <style name="NormalActivityTheme" parent="ThemeFullScreen">
+        <item name="android:windowBackground">@null</item>
+    </style>
+
+    <style name="ThemeFullScreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="windowActionBar">false</item>
+        <!--一定要，否则有状态栏显示，不能全屏-->
+        <item name="windowNoTitle">true</item>
+    </style>
+
+</resources>

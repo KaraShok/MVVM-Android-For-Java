@@ -1,16 +1,44 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.2"
+    compileSdkVersion build_versions.compile_sdk
+    
     defaultConfig {
         applicationId "com.karashok.mvvm.main"
-        minSdkVersion 19
-        targetSdkVersion 29
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        ndk { abiFilters "armeabi" }
+
+        //ARouter
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
     }
+
+    packagingOptions {
+        pickFirst 'com/itextpdf/text/pdf/fonts/cmap_info.txt'
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    dexOptions {
+        //incremental true
+        javaMaxHeapSize "4g"
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -26,4 +54,13 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+
+    annotationProcessor deps.arouter.compiler
+    implementation project(':lib_3rd')
+    implementation project(':common')
+    implementation project(':module_util')
+    implementation project(':module_gankio')
+    implementation project(':module_image_load')
+    implementation project(':module_preview_pictures')
+    implementation project(':module_preview_file')
 }

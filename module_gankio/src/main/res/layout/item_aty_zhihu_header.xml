@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="itemAtyZhihuHeader"
+            type="com.karashok.mvvm.module_gankio.data.view_modle.ItemAtyZhihuHeaderVM"/>
+    </data>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/item_aty_zhihu_header_vp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            itemBinding="@{itemAtyZhihuHeader.topItemView}"
+            items="@{itemAtyZhihuHeader.topItemVM}"/>
+
+    </FrameLayout>
+</layout>
