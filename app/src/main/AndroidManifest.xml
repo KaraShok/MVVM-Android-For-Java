@@ -30,6 +30,7 @@
         android:icon="@drawable/logo"
         android:label="@string/gank_io"
         android:roundIcon="@drawable/logo"
+        android:networkSecurityConfig="@xml/network_config"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
         <activity
