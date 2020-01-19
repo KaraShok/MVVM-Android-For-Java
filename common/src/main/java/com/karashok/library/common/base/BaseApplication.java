@@ -4,7 +4,6 @@ import android.app.Application;
 
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.apkfuns.logutils.LogUtils;
-import com.facebook.drawee.backends.pipeline.Fresco;
 import com.karashok.library.module_util.utilcode.utils.Utils;
 import com.karashok.library.module_util.utilcode.utils.app_util.AppUtils;
 import com.karashok.library.module_util.utilcode.utils.base_util.ClassUtils;
@@ -39,7 +38,6 @@ public class BaseApplication extends Application {
     }
 
     private void init(){
-        Fresco.initialize(this);
         initUtils();
         initRouter();
     }

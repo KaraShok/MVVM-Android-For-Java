@@ -4,7 +4,6 @@ import android.content.Context;
 
 import androidx.multidex.MultiDex;
 
-import com.facebook.drawee.backends.pipeline.Fresco;
 import com.karashok.library.common.base.BaseApplication;
 import com.karashok.library.module_util.utilcode.utils.Utils;
 
